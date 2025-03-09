@@ -1,11 +1,13 @@
 package com.example.oci_microservice.service;
 
-import com.example.oci_microservice.model.User;
-import com.example.oci_microservice.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.oci_microservice.model.User;
+import com.example.oci_microservice.repository.UserRepository;
 
 @Service
 public class UserService {
