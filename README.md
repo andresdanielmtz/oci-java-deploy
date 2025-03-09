@@ -10,7 +10,7 @@ Java + Oracle Cloud Springboot Repository deployed on Render.com.
 
 ### Endpoint
 
-- **Endpoint:** `https://oci-java-deploy.onrender.com/`
+`https://oci-java-deploy.onrender.com/`
 
 #### Methods
 

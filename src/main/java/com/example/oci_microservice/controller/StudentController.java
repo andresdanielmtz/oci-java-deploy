@@ -36,7 +36,7 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-    @GetMapping("/")
+    @GetMapping
     public String getStudents() {
         return studentService.getAllStudents().toString();
     }
