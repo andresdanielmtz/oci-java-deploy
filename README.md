@@ -2,6 +2,8 @@
 
 ## TC3004B - Software Design Planning
 
+Java + Oracle Cloud Springboot Repository deployed on Render.com.
+
 > Due to render.com constrains, sometimes it takes up to a couple of minutes to load the data from the API. Please taek that into consideraton.
 
 ---
@@ -31,13 +33,13 @@ Create and upload student to OCI database.
 
 ```json
 {
-    "firstName": string, 
+    "firstName": string,
     "lastName": string,
     "email": string
 }
 ```
 
-#### Body Example*
+#### Body Example
 
 ```json
 {
