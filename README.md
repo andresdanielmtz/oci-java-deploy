@@ -4,7 +4,7 @@
 
 Java + Oracle Cloud Springboot Repository deployed on Render.com.
 
-> Due to render.com constrains, sometimes it takes up to a couple of minutes to load the data from the API. Please taek that into consideraton.
+> Due to render.com constrains, sometimes it takes up to a couple of minutes to load the data from the API. Please take that into consideraton.
 
 ---
 
@@ -19,10 +19,14 @@ Java + Oracle Cloud Springboot Repository deployed on Render.com.
 
 Get list of students
 
+---
+
 - **GET** `students/{id}`
 `https://oci-java-deploy.onrender.com/students/18775`
 
 Get information of specific user.
+
+---
 
 - **POST** `students/`
 `https://oci-java-deploy.onrender.com/students`
