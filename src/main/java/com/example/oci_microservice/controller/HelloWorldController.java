@@ -9,6 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWorldController {
     @GetMapping
     public String helloWorld() {
-        return "Hello, World!";
+        return "<html>" +
+                "<body>" +
+                "<h1>Hello, World!</h1>" +
+                "<p>For more information, visit <a href='https://github.com/andresdanielmtz/oci-java-deploy'>the project repository</a>.</p>" +
+                "</body>" +
+                "</html>";
     }
 }
