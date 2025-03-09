@@ -42,7 +42,7 @@ public class StudentController {
     }
 
     @GetMapping("/{studentId}")
-    public String getStudentById(Long studentId) {
+    public String getStudentById(@PathVariable Long studentId) {
         return studentService.getStudentById(studentId).toString();
     }
 
