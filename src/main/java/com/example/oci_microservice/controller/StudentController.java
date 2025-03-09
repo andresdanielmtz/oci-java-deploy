@@ -15,6 +15,8 @@
 
 package com.example.oci_microservice.controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -55,8 +57,8 @@ public class StudentController {
     }
 
     @DeleteMapping("/{studentId}")
-    public ResponseEntity<Void> deleteStudent(@PathVariable Long studentId) {
-        return studentService.deleteStudent(studentId) ? ResponseEntity.noContent().build()
-                : ResponseEntity.notFound().build();
+    public ResponseEntity<Student> deleteStudent(@PathVariable Long studentId) {
+        Optional<Student> student = studentService.getStudentById(studentId);
+        return student.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 }
