@@ -1,5 +1,7 @@
 package com.example.oci_microservice.model;
 
+import com.example.utils.CustomIdGenerator;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,13 +21,13 @@ public class Student {
     @PrePersist
     private void ensureId() {
         if (this.studentId == null) {
-            this.studentId = (long) (10000 + Math.random() * 90000);
+            this.studentId = CustomIdGenerator.generateRandomId();
         }
     }
 
     /**
      * This method is called before the entity is persisted.
-     * It ensures that the studentId is set to a randomly generated value
+     * It ensures that the studentId is set using the custom id generator
      * if it is not already assigned.
      */
     private String firstName;
