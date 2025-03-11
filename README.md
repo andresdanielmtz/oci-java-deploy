@@ -39,7 +39,8 @@ Create and upload student to OCI database.
 {
     "firstName": string,
     "lastName": string,
-    "email": string
+    "email": string,
+    "studentIdentification": string
 }
 ```
 
@@ -49,6 +50,7 @@ Create and upload student to OCI database.
 {
     "firstName": "Andrés",
     "lastName": "Martínez",
-    "email": "andresdanielmtz@hotmail.com"
+    "email": "andresdanielmtz@hotmail.com",
+    "studentIdentification": "A00227463"
 }
 ```
