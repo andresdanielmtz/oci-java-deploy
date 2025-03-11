@@ -22,6 +22,10 @@ public class StudentService {
         return studentRepository.findById(id);
     }
 
+    public Optional<Student> getStudentByIdentification(String identification) {
+        return studentRepository.findByStudentIdentification(identification);
+    }
+
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
     }

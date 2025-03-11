@@ -41,14 +41,15 @@ public class StudentController {
         return studentService.getAllStudents().toString();
     }
 
-    @GetMapping("/{studentId}")
-    public String getStudentById(@PathVariable Long studentId) {
-        return studentService.getStudentById(studentId).toString();
+    @GetMapping("/{studentIdentification}")
+    public String getStudentByIdentification(@PathVariable String studentIdentification) {
+        return studentService.getStudentByIdentification(studentIdentification).toString();
     }
+    
 
     @GetMapping("/hello")
     public String hello() {
-        return "This (student) route is working! :3";
+        return "This (student) route is working!";
     }
 
     @PostMapping
@@ -56,9 +57,4 @@ public class StudentController {
         return studentService.createStudent(student);
     }
 
-    @DeleteMapping("/{studentId}")
-    public ResponseEntity<Student> deleteStudent(@PathVariable Long studentId) {
-        Optional<Student> student = studentService.getStudentById(studentId);
-        return student.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
-    }
 }
