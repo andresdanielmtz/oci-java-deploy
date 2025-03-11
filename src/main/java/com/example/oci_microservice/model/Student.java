@@ -13,12 +13,12 @@ import lombok.Data;
 @Data
 public class Student {
     @Id
-    private Long id;
+    private Long studentId;
 
     @PrePersist
     private void ensureId() {
-        if (this.id == null) {
-            this.id = CustomIdGenerator.generateRandomId();
+        if (this.studentId == null) {
+            this.studentId = CustomIdGenerator.generateRandomId();
         }
     }
 
@@ -27,7 +27,7 @@ public class Student {
      * It ensures that the studentId is set using the custom id generator
      * if it is not already assigned.
      */
-    
+
     private String firstName;
     private String lastName;
     private String email;
